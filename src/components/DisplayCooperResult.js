@@ -18,9 +18,9 @@ class DisplayCooperResult extends Component {
         <div>
           <p>
             For a {this.props.age} year-old {this.props.gender} running a
-            distance of {this.props.distance},
+            distance of {this.props.distance}, the Cooper Test result is:{" "}
+            {this.calculate()}.
           </p>
-          <p>the Cooper Test result is: {this.calculate}.</p>
         </div>
       );
     }
