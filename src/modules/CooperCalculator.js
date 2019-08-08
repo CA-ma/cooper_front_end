@@ -2,11 +2,11 @@ export const CooperCalculator = (age, gender, distance) => {
 
   {/* Cooper test rubric */}
   const ratings = [
-    'Excellent',
-    'Above average',
-    'Average',
-    'Below average',
-    'Poor'
+    'excellent',
+    'above average',
+    'average',
+    'below average',
+    'poor'
   ];
 
   const cooperTable = {
