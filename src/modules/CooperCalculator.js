@@ -29,5 +29,30 @@ export const CooperCalculator = (age, gender, distance) => {
     }
   };
 
+  const ageRangeTable = (age) => {
+    switch (true) {
+      case age >= 13 && age <= 14:
+        return '13-14';
+      case age >= 15 && age <= 16:
+        return '15-16';
+      case age >= 17 && age <= 19:
+        return '17-19';
+      case age >= 20 && age <= 29:
+        return '20-29';
+      case age >= 30 && age <= 39:
+        return '30-39';
+      case age >= 40 && age <= 49:
+        return '40-49';
+      case age >= 50:
+        return '50+';
+      default:
+        return 'invalid range';
+    }
+  }
 
+  const ageRange = ageRangeTable(parseInt(age));
+
+  if (ageRange === 'invalid range') {
+    return 'The Cooper Test is invalid for this age range';
+  }
 }
