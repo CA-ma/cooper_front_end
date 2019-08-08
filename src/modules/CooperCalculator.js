@@ -1,5 +1,6 @@
 export const CooperCalculator = (age, gender, distance) => {
 
+  {/* Cooper test rubric */}
   const ratings = [
     'Excellent',
     'Above average',
@@ -29,6 +30,7 @@ export const CooperCalculator = (age, gender, distance) => {
     }
   };
 
+  {/* Convert arg: age to age range */} 
   const ageRangeTable = (age) => {
     switch (true) {
       case age >= 13 && age <= 14:
@@ -55,4 +57,27 @@ export const CooperCalculator = (age, gender, distance) => {
   if (ageRange === 'invalid range') {
     return 'The Cooper Test is invalid for this age range';
   }
+
+  {/* Extract Cooper Test rating from args: gender and distance */}
+  const distanceRanges = cooperTable[gender.toLowerCase()][ageRange]
+
+  let ratingIndex;
+
+  distanceRanges.forEach((dRange, index) => {
+    if (
+      (dRange.match(/>\d*/) && distance >= parseInt(dRange.slice(1), 10)) ||
+      (dRange.match(/<\d*/) && distance < parseInt(dRange.slice(1), 10))
+    ) {
+      ratingIndex = index;
+    } else {
+      const minMax = dRange.split('-');
+      const min = parseInt(minMax[0], 10);
+      const max = parseInt(minMax[1], 10);
+
+      if (distance >= min && distance <= max) {
+        ratingIndex = index;
+      }
+    }
+  });
+  return ratings[ratingIndex];
 }
