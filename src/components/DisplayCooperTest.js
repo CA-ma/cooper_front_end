@@ -1,10 +1,33 @@
 import React, { Component} from 'react';
 
 class DisplayCooperResult extends Component {
-  render() {
-    return {
+  
+  calculate() {
 
+  }
+
+  render() {
+
+    let result
+
+    if (this.props.age !== '' && this.props.distance !== '') {
+      result = 
+        <div>
+          <p>
+            For a { this.props.age } year-old { this.props.gender } running a distance of { this.props.distance },
+          </p>
+          <p>
+            the Cooper Test result is: { this.calculate }.
+          </p>
+        </div>;
     }
+
+
+    return (
+      <div>
+        { result }
+      </div>
+    )
   }
 }
 
