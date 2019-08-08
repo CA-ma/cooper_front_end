@@ -81,3 +81,5 @@ export const CooperCalculator = (age, gender, distance) => {
   });
   return ratings[ratingIndex];
 }
+
+export default CooperCalculator;
