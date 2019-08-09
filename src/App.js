@@ -23,6 +23,9 @@ class App extends Component {
           gender={this.state.gender}
           distance={this.state.distance}
         />
+
+        <hr></hr>
+        <button id="login">Login</button>
       </div>
     )
   }
