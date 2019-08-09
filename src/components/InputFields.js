@@ -3,16 +3,22 @@ import React from 'react';
 const InputFields = (props) => {
   return (
     <>
-      <label>Distance</label>
-      <input id="distance" onChange={props.inputChangeHandler} />
+      <div>
+        <label>Age</label>&nbsp;&nbsp;
+        <input id="age" onChange={props.inputChangeHandler} />&nbsp;&nbsp;
 
-      <select id="gender" onChange={props.inputChangeHandler}>
-        <option value="female">Female</option>
-        <option value="male">Male</option>
-      </select>
-
-      <label>Age</label>
-      <input id="age" onChange={props.inputChangeHandler} />
+        <span>Gender</span>&nbsp;&nbsp;
+        <select id="gender" onChange={props.inputChangeHandler}>
+          <option value="female">Female</option>
+          <option value="male">Male</option>
+        </select>
+      </div>
+      
+      <div>
+        <label>Distance</label>&nbsp;&nbsp;
+        <input id="distance" onChange={props.inputChangeHandler} />&nbsp;&nbsp;
+        <span>[meters]</span>
+      </div>
     </>
   )
 }
