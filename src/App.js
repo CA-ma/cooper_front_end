@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+
 import DisplayCooperResult from "./components/DisplayCooperResult";
 import InputFields from "./components/InputFields";
+import LoginForm from "./components/LoginForm";
 
 class App extends Component {
   constructor() {
@@ -26,6 +28,7 @@ class App extends Component {
 
         <hr></hr>
         <button id="login">Login</button>
+        <LoginForm />
       </div>
     )
   }
