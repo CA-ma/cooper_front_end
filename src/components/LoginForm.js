@@ -1,5 +1,7 @@
+// Import libraries
 import React from 'react';
 
+// Component to render login form with email and password inputs
 const LoginForm = () => {
   return (
     <form id="login-form">
