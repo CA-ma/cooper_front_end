@@ -7,7 +7,7 @@ describe('Visitor can input metrics and get Cooper Calculator result', () => {
   });
 
   it('should see distance', () => {
-    cy.contains('23 y/o');
+    cy.contains('23 year-old');
   });
 
   it('should see gender', () => {
@@ -15,10 +15,10 @@ describe('Visitor can input metrics and get Cooper Calculator result', () => {
   });
 
   it('should see age', () => {
-    cy.contains('running 1000 meters');
+    cy.contains('running a distance of 1000 meters');
   });
 
   it('should see result', () => {
-    cy.contains('Result: Poor');
+    cy.contains('the Cooper Test result is: poor');
   });
 });
