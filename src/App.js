@@ -1,7 +1,9 @@
 import React, { Component } from "react";
+import DisplayCooperResult from './components/DisplayCooperResult'
 
 class App extends Component {
   constructor() {
+    super();
     this.state = { age: '', gender: 'female', distance: '' };
   }
 
@@ -26,6 +28,8 @@ class App extends Component {
           <label>Age</label>
           <input id="age" onChange={this.onChange.bind(this)} />
         </div>
+
+        <DisplayCooperResult age = { this.state.age } gender = { this.state.gender } distance = { this.state.distance } />
       </div>
     );
   }
