@@ -15,7 +15,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <p>Please enter your biometrics and run distance to see the corresponding Cooper Test result.</p>
+        <p>Please enter your biometrics and run distance to see the corresponding <a href="https://en.wikipedia.org/wiki/Cooper_test" >Cooper Test</a> result.</p>
         <InputFields inputChangeHandler={this.onChange.bind(this)} />
 
         <DisplayCooperResult
