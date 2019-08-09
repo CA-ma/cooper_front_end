@@ -1,22 +1,30 @@
 import React, { Component } from "react";
 
 class App extends Component {
+  constructor() {
+    this.state = { age: '', gender: 'female', distance: '' };
+  }
+
+  onChange(event) {
+    this.setState({ [event.target.id]: event.target.value })
+  }
+
   render() {
     return (
-      <div className="App">
+      <div>
         <div>
           <label>Distance</label>
-          <input id="distance" />
+          <input id="distance" onChange={this.onChange.bind(this)} />
         </div>
 
-        <select id="gender">
+        <select id="gender" onChange={this.onChange.bind(this)}>
           <option value="female">Female</option>
           <option value="male">Male</option>
         </select>
 
         <div>
           <label>Age</label>
-          <input id="age" />
+          <input id="age" onChange={this.onChange.bind(this)} />
         </div>
       </div>
     );
