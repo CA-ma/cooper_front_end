@@ -1,6 +1,3 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-
 import CooperCalculator from '../modules/CooperCalculator'
 
 describe('CooperCalculator returns result', () => {
